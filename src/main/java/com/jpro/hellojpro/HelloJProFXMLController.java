@@ -1,5 +1,6 @@
 package com.jpro.hellojpro;
 
+import com.jpro.web.Util;
 import com.jpro.webapi.JProApplication;
 import com.jpro.webapi.WebAPI;
 import javafx.animation.Animation;
@@ -28,7 +29,7 @@ public class HelloJProFXMLController implements Initializable
     @FXML
     protected Node logo;
 
-    protected JProApplication jProApplication;
+    protected WebAPI webAPI;
 
     protected ParallelTransition pt;
 
@@ -37,6 +38,8 @@ public class HelloJProFXMLController implements Initializable
     public void initialize(URL location, ResourceBundle resources)
     {
         platformLabel.setText(String.format("Platform: %s", WebAPI.isBrowser() ? "Browser" : "Desktop"));
+
+        Util.setLink(logo, "https://www.jpro.one/");
     }
 
     protected void initLogoAnimation(Node logo)
@@ -57,16 +60,16 @@ public class HelloJProFXMLController implements Initializable
         pt.play();
 
         if(WebAPI.isBrowser()) {
-            jProApplication.getWebAPI().addInstanceCloseListener(() -> {
+            webAPI.addInstanceCloseListener(() -> {
                 pt.stop();
             });
         }
     }
 
 
-    public void init(JProApplication jProApplication)
+    public void init(WebAPI webAPI)
     {
-        this.jProApplication = jProApplication;
+        this.webAPI = webAPI;
         initLogoAnimation(this.logo);
     }
 }

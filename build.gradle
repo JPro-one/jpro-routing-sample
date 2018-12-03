@@ -33,8 +33,7 @@ repositories {
 }
 
 dependencies {
-// Add your dependencies here, for example:
-// compile group: 'org.controlsfx', name: 'controlsfx', version: '8.40.14'
+  compile "com.sandec.jpro:jpro-web-core:0.5.0-SNAPSHOT"
 }
 
 /**

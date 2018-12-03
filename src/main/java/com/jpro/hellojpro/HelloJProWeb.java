@@ -1,5 +1,6 @@
 package com.jpro.hellojpro;
 
+import com.jpro.webapi.JProApplication;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -7,7 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class HelloJPro extends Application {
+public class HelloJProWeb extends JProApplication {
 
     public static void main(String[] args)
     {
@@ -17,10 +18,9 @@ public class HelloJPro extends Application {
     @Override
     public void start(Stage stage)
     {
-        Label label = new Label("Hello JPro!");
-        label.setFont(new Font(50));
-        label.setAlignment(Pos.CENTER);
-        stage.setScene(new Scene(label));
+        HelloJProApp app = new HelloJProApp(this,stage);
+        stage.setScene(new Scene(app));
         stage.show();
+        app.start();
     }
 }
