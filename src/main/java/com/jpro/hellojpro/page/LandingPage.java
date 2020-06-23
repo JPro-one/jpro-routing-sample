@@ -28,6 +28,11 @@ public class LandingPage extends View {
     }
 
     @Override
+    public boolean fullscreen() {
+        return true;
+    }
+
+    @Override
     public Node content() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/jpro/hellojpro/fxml/HelloJPro.fxml"));
         Scene scene = null;
