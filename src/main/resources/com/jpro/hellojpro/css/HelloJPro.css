@@ -2,23 +2,60 @@
     -fx-background-color: white;
 }
 
-.label {
-    -fx-font-size: 16px;
+.page-outer-vbox {
+  -fx-background-color: #f5f5f5;
+  -fx-alignment: center;
 }
 
-.hello-label {
-    -fx-translate-y: -80px;
-    -fx-text-fill: #999;
-    -fx-font-size: 32px;
+.page-inner-vbox {
+  -fx-padding: 20 0 20 0;
+  -fx-max-width: 800;
+  -fx-background-color: white;
+  -fx-alignment: center;
+  -fx-spacing: 20;
 }
 
-.platform-label {
-    -fx-translate-y: -10px;
-    -fx-text-fill: #BBB;
-    -fx-font-size: 14px;
+.header {
+  -fx-alignment: center;
+  -fx-spacing: 50;
+  -fx-padding: 10;
+  -fx-background-color: #cceeff;
 }
 
-.progress-indicator {
-    -fx-max-width: 32px;
-    -fx-max-height: 32px;
+.header-link {
+  -fx-font-size: 24;
+}
+
+.header-link-selected {
+  -fx-underline: true;
+}
+
+.flow-pane {
+  -fx-alignment: center;
+  -fx-max-width: 700;
+  -fx-hgap: 20;
+  -fx-vgap: 20;
+}
+
+.big-cell {
+  -fx-background-color: green;
+  -fx-pref-width: 300;
+  -fx-min-height: 300;
+  -fx-font-size: 32;
+}
+
+.big-cell-1 {
+  -fx-background-color: yellow;
+}
+
+.big-cell-2 {
+  -fx-background-color: lightgreen;
+}
+
+.big-cell-3 {
+  -fx-background-color: orange;
+}
+
+.big-cell-4 {
+  -fx-background-color: lightblue;
 }
