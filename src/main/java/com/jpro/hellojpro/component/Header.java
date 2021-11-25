@@ -11,6 +11,7 @@ public class Header extends HBox {
         getStyleClass().add("header");
         getChildren().add(new Link("Header","/landing"));
         getChildren().add(new Link("Info","/info"));
+        getChildren().add(new Link("FXML","/fxml"));
     }
 
     class Link extends Label {

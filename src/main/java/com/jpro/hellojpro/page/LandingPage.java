@@ -26,6 +26,8 @@ public class LandingPage extends DefaultPage {
         flow.getChildren().add(new BigCell(2));
         flow.getChildren().add(new BigCell(3));
         flow.getChildren().add(new BigCell(4));
+        flow.getChildren().add(new BigCell(5));
+        flow.getChildren().add(new BigCell(6));
         return flow;
     }
 

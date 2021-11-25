@@ -1,5 +1,6 @@
 package com.jpro.hellojpro;
 
+import com.jpro.hellojpro.page.FXMLPage;
 import com.jpro.hellojpro.page.InfoPage;
 import com.jpro.hellojpro.page.LandingPage;
 import com.jpro.web.Redirect;
@@ -21,6 +22,8 @@ public class HelloJProApp extends WebApp {
                 return new LandingPage(WebAPI.isBrowser() ? WebAPI.getWebAPI(stage) : null);
             case "/info":
                 return new InfoPage(WebAPI.isBrowser() ? WebAPI.getWebAPI(stage) : null);
+            case "/fxml":
+                return new FXMLPage(WebAPI.isBrowser() ? WebAPI.getWebAPI(stage) : null);
             default:
                 return null;
         }});
