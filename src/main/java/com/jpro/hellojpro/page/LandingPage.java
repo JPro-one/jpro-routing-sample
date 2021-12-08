@@ -24,9 +24,9 @@ public class LandingPage extends DefaultPage {
     public Node pageContent() {
         FlowPane flow = new FlowPane();
         flow.getStyleClass().add("flow-pane");
-        flow.getChildren().add(new BigCell(1, "", "https://www.jpro.one"));
-        flow.getChildren().add(new BigCell(2, "Markdown Page", "/info"));
-        flow.getChildren().add(new BigCell(3, "FXML Page", "/fxml"));
+        flow.getChildren().add(new BigCell(1, "Markdown Page", "/info"));
+        flow.getChildren().add(new BigCell(2, "FXML Page", "/fxml"));
+        flow.getChildren().add(new BigCell(3, "", "https://www.jpro.one"));
         flow.getChildren().add(new BigCell(4, "", "https://www.javafx-ensemble.com"));
         flow.getChildren().add(new BigCell(5, "", "https://www.jfx-central.com"));
         flow.getChildren().add(new BigCell(6, "", "https://openjfx.io"));

@@ -49,9 +49,7 @@
 }
 
 .big-cell-1 {
-  -fx-background-image: url('/com/jpro/hellojpro/img/preview-jpro.png');
-  -fx-background-position: center center;
-  -fx-background-size: cover;
+  -fx-background-color: orange;
 }
 
 .big-cell-2 {
@@ -59,7 +57,9 @@
 }
 
 .big-cell-3 {
-  -fx-background-color: orange;
+  -fx-background-image: url('/com/jpro/hellojpro/img/preview-jpro.png');
+  -fx-background-position: center center;
+  -fx-background-size: cover;
 }
 
 .big-cell-4 {
