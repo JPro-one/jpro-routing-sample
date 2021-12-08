@@ -30,6 +30,10 @@
   -fx-underline: true;
 }
 
+.info-container {
+  -fx-padding: 0 60 0 60;
+}
+
 .flow-pane {
   -fx-alignment: center;
   -fx-max-width: 700;
@@ -40,12 +44,14 @@
 .big-cell {
   -fx-background-color: green;
   -fx-pref-width: 300;
-  -fx-min-height: 300;
+  -fx-min-height: 240;
   -fx-font-size: 32;
 }
 
 .big-cell-1 {
-  -fx-background-color: yellow;
+  -fx-background-image: url('/com/jpro/hellojpro/img/preview-jpro.png');
+  -fx-background-position: center center;
+  -fx-background-size: cover;
 }
 
 .big-cell-2 {
@@ -57,13 +63,19 @@
 }
 
 .big-cell-4 {
-  -fx-background-color: lightblue;
+  -fx-background-image: url('/com/jpro/hellojpro/img/preview-ensemble.png');
+  -fx-background-position: center center;
+  -fx-background-size: cover;
 }
 
 .big-cell-5 {
-  -fx-background-color: lightpink;
+  -fx-background-image: url('/com/jpro/hellojpro/img/preview-central.png');
+  -fx-background-position: center center;
+  -fx-background-size: cover;
 }
 
 .big-cell-6 {
-  -fx-background-color: olive;
+  -fx-background-image: url('/com/jpro/hellojpro/img/preview-openjfx.png');
+  -fx-background-position: center center;
+  -fx-background-size: cover;
 }

@@ -39,6 +39,7 @@ dependencies {
   compile "com.sandec.jpro:jpro-web-core:0.8.9"
   compile "com.sandec:mdfx:0.2.4"
   compile "fr.brouillard.oss:cssfx:11.4.0"
+  compile "commons-io:commons-io:2.11.0"
 }
 
 apply plugin: 'org.openjfx.javafxplugin'

@@ -3,11 +3,15 @@ package com.jpro.hellojpro.page;
 import com.jpro.webapi.WebAPI;
 import com.sandec.mdfx.MarkdownView;
 import javafx.scene.Node;
+import javafx.scene.layout.StackPane;
+import org.apache.commons.io.IOUtils;
+
+import java.io.File;
+import java.io.IOException;
 
 public class InfoPage extends DefaultPage {
 
-    static String infoString = " ### Hello!\n" +
-            "I'm some info text!";
+    private File readmeFile = new File("README.md");
 
     public InfoPage(WebAPI webAPI) {
         super(webAPI);
@@ -15,6 +19,14 @@ public class InfoPage extends DefaultPage {
 
     @Override
     public Node pageContent() {
-        return new MarkdownView(infoString);
+        try {
+            String readmeStr = IOUtils.toString(readmeFile.toURI()   , "utf-8");
+            MarkdownView mview = new MarkdownView(readmeStr);
+            StackPane infoContainer = new StackPane(mview);
+            infoContainer.getStyleClass().add("info-container");
+            return infoContainer;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
