@@ -1,7 +1,7 @@
 package com.jpro.hellojpro.page;
 
-import com.jpro.web.Util;
-import com.jpro.web.View;
+import com.jpro.routing.LinkUtil;
+import com.jpro.routing.View;
 import com.jpro.webapi.WebAPI;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -35,7 +35,7 @@ public class LandingPage extends DefaultPage {
 
     class BigCell extends StackPane {
         BigCell(int i, String txt, String link) {
-            Util.setLink(this, link);
+            LinkUtil.setLink(this, link);
             getStyleClass().add("big-cell");
             getStyleClass().add("big-cell-" + i);
             getChildren().add(new Label(txt));

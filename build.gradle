@@ -14,7 +14,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.sandec.jpro:jpro-plugin-gradle:2021.2.2'
+    classpath 'com.sandec.jpro:jpro-plugin-gradle:2022.1.7'
     classpath 'org.openjfx:javafx-plugin:0.0.12'
   }
 }
@@ -36,9 +36,9 @@ repositories {
 }
 
 dependencies {
-  implementation "com.sandec.jpro:jpro-web-core:0.9.1"
-  implementation "com.sandec:mdfx:0.2.4"
-  implementation "fr.brouillard.oss:cssfx:11.4.0"
+  implementation "com.sandec.jpro:jpro-routing-core:0.11.0"
+  implementation "com.sandec:mdfx:0.2.8"
+  implementation "fr.brouillard.oss:cssfx:11.5.1"
   implementation "commons-io:commons-io:2.11.0"
 }
 

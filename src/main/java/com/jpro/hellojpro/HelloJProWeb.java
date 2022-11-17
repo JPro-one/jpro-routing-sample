@@ -1,6 +1,6 @@
 package com.jpro.hellojpro;
 
-import com.jpro.web.sessionmanager.SessionManager;
+import com.jpro.routing.sessionmanager.SessionManager;
 import com.jpro.webapi.JProApplication;
 import com.jpro.webapi.WebAPI;
 import javafx.application.Application;

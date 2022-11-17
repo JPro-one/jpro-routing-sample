@@ -1,6 +1,6 @@
 package com.jpro.hellojpro.component;
 
-import com.jpro.web.Util;
+import com.jpro.routing.LinkUtil;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 
@@ -17,7 +17,7 @@ public class Header extends HBox {
     class Link extends Label {
         Link(String txt, String link) {
             super(txt);
-            Util.setLink(this,link,txt);
+            LinkUtil.setLink(this,link,txt);
             getStyleClass().add("header-link");
             System.out.println("currentURL: \"" + currentURL + "\"");
             System.out.println("link: \"" + link + "\"");

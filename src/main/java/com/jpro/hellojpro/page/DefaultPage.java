@@ -1,7 +1,7 @@
 package com.jpro.hellojpro.page;
 
 import com.jpro.hellojpro.component.Header;
-import com.jpro.web.View;
+import com.jpro.routing.View;
 import com.jpro.webapi.WebAPI;
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;

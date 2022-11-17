@@ -3,8 +3,8 @@ package com.jpro.hellojpro;
 import com.jpro.hellojpro.page.FXMLPage;
 import com.jpro.hellojpro.page.InfoPage;
 import com.jpro.hellojpro.page.LandingPage;
-import com.jpro.web.Redirect;
-import com.jpro.web.WebApp;
+import com.jpro.routing.Redirect;
+import com.jpro.routing.WebApp;
 import com.jpro.webapi.JProApplication;
 import com.jpro.webapi.WebAPI;
 import javafx.stage.Stage;
@@ -14,7 +14,7 @@ public class HelloJProApp extends WebApp {
         super(stage);
         getStylesheets().add(getClass().getResource("/com/jpro/hellojpro/css/HelloJPro.css").toString());
 
-        addRouteJava((s) -> { switch(s) {
+        addRoute((s) -> { switch(s) {
             case "":
             case "/":
                 return new Redirect("/landing");
