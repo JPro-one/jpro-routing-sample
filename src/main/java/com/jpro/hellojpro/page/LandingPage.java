@@ -1,7 +1,6 @@
 package com.jpro.hellojpro.page;
 
-import com.jpro.routing.LinkUtil;
-import com.jpro.routing.View;
+
 import com.jpro.webapi.WebAPI;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -12,6 +11,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
+import one.jpro.routing.LinkUtil;
+
 import java.io.IOException;
 
 public class LandingPage extends DefaultPage {

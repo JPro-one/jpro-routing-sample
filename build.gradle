@@ -14,7 +14,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.sandec.jpro:jpro-plugin-gradle:2022.1.8'
+    classpath 'one.jpro:jpro-gradle-plugin:2023.1.0'
     classpath 'org.openjfx:javafx-plugin:0.0.13'
   }
 }
@@ -36,8 +36,8 @@ repositories {
 }
 
 dependencies {
-  implementation "com.sandec.jpro:jpro-routing-core:0.11.0"
-  implementation "com.sandec:mdfx:0.2.8"
+  implementation "one.jpro:jpro-routing-core:0.14.0"
+  implementation "com.sandec:mdfx:0.2.12"
   implementation "fr.brouillard.oss:cssfx:11.5.1"
   implementation "commons-io:commons-io:2.11.0"
 }
@@ -52,14 +52,13 @@ javafx {
 /**
  ******************  jpro Configuration ******************
  */
-apply plugin: 'com.sandec.jpro'
+apply plugin: 'jpro-gradle-plugin'
 
 
 /**
  * App Main Class
  */
-//mainClassName = 'com.jpro.hellojpro.HelloJPro'
-mainClassName = 'com.jpro.hellojpro.HelloJProWeb'
+mainClassName = 'com.jpro.hellojpro.HelloRoutingApp'
 
 /**
  * jpro settings
