@@ -5,7 +5,7 @@ import com.jpro.hellojpro.component.Header;
 import com.jpro.webapi.WebAPI;
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;
-import one.jpro.routing.View;
+import one.jpro.platform.routing.View;
 
 public abstract class DefaultPage extends View {
 

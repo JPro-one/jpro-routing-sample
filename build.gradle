@@ -14,7 +14,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'one.jpro:jpro-gradle-plugin:2023.1.0'
+    classpath 'one.jpro:jpro-gradle-plugin:2023.3.3'
     classpath 'org.openjfx:javafx-plugin:0.0.13'
   }
 }
@@ -27,16 +27,19 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 compileJava {
-  sourceCompatibility = 11
-  targetCompatibility = 11
+  sourceCompatibility = 17
+  targetCompatibility = 17
 }
 
 repositories {
+  maven {
+    url "https://sandec.jfrog.io/artifactory/repo"
+  }
   mavenCentral()
 }
 
 dependencies {
-  implementation "one.jpro:jpro-routing-core:0.14.0"
+  implementation "one.jpro.platform:jpro-routing-core:0.2.8"
   implementation "com.sandec:mdfx:0.2.12"
   implementation "fr.brouillard.oss:cssfx:11.5.1"
   implementation "commons-io:commons-io:2.11.0"
@@ -45,7 +48,7 @@ dependencies {
 apply plugin: 'org.openjfx.javafxplugin'
 
 javafx {
-  version = '17.0.2'
+  version = '17.0.9'
   modules = [ 'javafx.base', 'javafx.graphics', 'javafx.controls', 'javafx.fxml', 'javafx.media', 'javafx.web' ]
 }
 
