@@ -39,7 +39,7 @@ repositories {
 }
 
 dependencies {
-  implementation "one.jpro.platform:jpro-routing-core:0.2.8"
+  implementation "one.jpro.platform:jpro-routing-core:0.2.9"
   implementation "com.sandec:mdfx:0.2.12"
   implementation "fr.brouillard.oss:cssfx:11.5.1"
   implementation "commons-io:commons-io:2.11.0"

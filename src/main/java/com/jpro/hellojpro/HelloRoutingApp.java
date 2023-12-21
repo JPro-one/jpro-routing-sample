@@ -16,11 +16,11 @@ public class HelloRoutingApp extends RouteApp {
         getScene().getStylesheets().add(getClass().getResource("/com/jpro/hellojpro/css/HelloJPro.css").toString());
 
         return Route.empty()
-            .and(RouteUtils.redirect("/", "/landing"))
-            .and(RouteUtils.redirect("/", "/landing"))
-            .and(RouteUtils.get("/landing", (r) -> Response.view(new LandingPage(WebAPI.isBrowser() ? WebAPI.getWebAPI(getStage()) : null))))
-            .and(RouteUtils.get("/info", (r) -> Response.view(new InfoPage(WebAPI.isBrowser() ? WebAPI.getWebAPI(getStage()) : null))))
-            .and(RouteUtils.get("/fxml", (r) -> Response.view(new FXMLPage(WebAPI.isBrowser() ? WebAPI.getWebAPI(getStage()) : null))));
+            .and(Route.redirect("/", "/landing"))
+            .and(Route.redirect("/", "/landing"))
+            .and(Route.get("/landing", (r) -> Response.view(new LandingPage(WebAPI.isBrowser() ? WebAPI.getWebAPI(getStage()) : null))))
+            .and(Route.get("/info", (r) -> Response.view(new InfoPage(WebAPI.isBrowser() ? WebAPI.getWebAPI(getStage()) : null))))
+            .and(Route.get("/fxml", (r) -> Response.view(new FXMLPage(WebAPI.isBrowser() ? WebAPI.getWebAPI(getStage()) : null))));
     }
 
 }
