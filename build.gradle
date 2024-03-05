@@ -14,7 +14,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'one.jpro:jpro-gradle-plugin:2023.3.3'
+    classpath 'one.jpro:jpro-gradle-plugin:2024.1.0'
     classpath 'org.openjfx:javafx-plugin:0.0.13'
   }
 }
@@ -39,8 +39,10 @@ repositories {
 }
 
 dependencies {
-  implementation "one.jpro.platform:jpro-routing-core:0.2.9"
-  implementation "com.sandec:mdfx:0.2.12"
+  implementation "one.jpro.platform:jpro-routing-core:0.2.14"
+  implementation "one.jpro.platform:jpro-routing-dev:0.2.14"
+  implementation "one.jpro.platform:jpro-auth-routing:0.2.14"
+  implementation "one.jpro.platform:jpro-mdfx:0.2.14"
   implementation "fr.brouillard.oss:cssfx:11.5.1"
   implementation "commons-io:commons-io:2.11.0"
 }
@@ -48,7 +50,7 @@ dependencies {
 apply plugin: 'org.openjfx.javafxplugin'
 
 javafx {
-  version = '17.0.9'
+  version = '21.0.2-sandec'
   modules = [ 'javafx.base', 'javafx.graphics', 'javafx.controls', 'javafx.fxml', 'javafx.media', 'javafx.web' ]
 }
 
