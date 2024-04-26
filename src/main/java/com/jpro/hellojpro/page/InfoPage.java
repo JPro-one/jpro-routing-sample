@@ -1,9 +1,9 @@
 package com.jpro.hellojpro.page;
 
 import com.jpro.webapi.WebAPI;
-import com.sandec.mdfx.MarkdownView;
 import javafx.scene.Node;
 import javafx.scene.layout.StackPane;
+import one.jpro.platform.mdfx.MarkdownView;
 import org.apache.commons.io.IOUtils;
 
 import java.io.File;

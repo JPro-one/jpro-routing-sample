@@ -1,12 +1,10 @@
 package com.jpro.hellojpro.page;
 
 import com.jpro.webapi.WebAPI;
-import com.sandec.mdfx.MarkdownView;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
