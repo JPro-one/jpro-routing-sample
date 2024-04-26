@@ -1,22 +1,21 @@
-
 /**
  ******************  Script Configuration ******************
  */
 buildscript {
-  repositories {
-    mavenCentral()
+    repositories {
+        mavenCentral()
 
-    gradlePluginPortal()
+        gradlePluginPortal()
 
-    maven {
-      url "https://sandec.jfrog.io/artifactory/repo"
+        maven {
+            url "https://sandec.jfrog.io/artifactory/repo"
+        }
     }
-  }
 
-  dependencies {
-    classpath 'one.jpro:jpro-gradle-plugin:2024.1.0'
-    classpath 'org.openjfx:javafx-plugin:0.0.13'
-  }
+    dependencies {
+        classpath "one.jpro:jpro-gradle-plugin:$jproVersion"
+        classpath "org.openjfx:javafx-plugin:$javafxPluginVersion"
+    }
 }
 
 
@@ -27,31 +26,31 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 compileJava {
-  sourceCompatibility = 17
-  targetCompatibility = 17
+    sourceCompatibility = 17
+    targetCompatibility = 17
 }
 
 repositories {
-  maven {
-    url "https://sandec.jfrog.io/artifactory/repo"
-  }
-  mavenCentral()
+    maven {
+        url "https://sandec.jfrog.io/artifactory/repo"
+    }
+    mavenCentral()
 }
 
 dependencies {
-  implementation "one.jpro.platform:jpro-routing-core:0.2.14"
-  implementation "one.jpro.platform:jpro-routing-dev:0.2.14"
-  implementation "one.jpro.platform:jpro-auth-routing:0.2.14"
-  implementation "one.jpro.platform:jpro-mdfx:0.2.14"
-  implementation "fr.brouillard.oss:cssfx:11.5.1"
-  implementation "commons-io:commons-io:2.11.0"
+    implementation "one.jpro.platform:jpro-routing-core:$jproPlatformVersion"
+    implementation "one.jpro.platform:jpro-routing-dev:$jproPlatformVersion"
+    implementation "one.jpro.platform:jpro-auth-routing:$jproPlatformVersion"
+    implementation "one.jpro.platform:jpro-mdfx:$jproPlatformVersion"
+    implementation "fr.brouillard.oss:cssfx:$cssfxVersion"
+    implementation "commons-io:commons-io:$commonsIoVersion"
 }
 
 apply plugin: 'org.openjfx.javafxplugin'
 
 javafx {
-  version = '21.0.2-sandec'
-  modules = [ 'javafx.base', 'javafx.graphics', 'javafx.controls', 'javafx.fxml', 'javafx.media', 'javafx.web' ]
+    version = '21.0.2-sandec'
+    modules = ['javafx.base', 'javafx.graphics', 'javafx.controls', 'javafx.fxml', 'javafx.media', 'javafx.web']
 }
 
 /**
@@ -69,13 +68,13 @@ mainClassName = 'com.jpro.hellojpro.HelloRoutingApp'
  * jpro settings
  */
 jpro {
-  // for debugging
-  // JVMArgs << '-agentlib:jdwp=transport=dt_socket,server=n,address=5006,suspend=y'
+    // for debugging
+    // JVMArgs << '-agentlib:jdwp=transport=dt_socket,server=n,address=5006,suspend=y'
 
-  JVMArgs << '-Xmx1000m'
+    JVMArgs << '-Xmx1000m'
 
-  //jpro server port
-  port = 8080
+    //jpro server port
+    port = 8080
 
-  openingPath = ""
+    openingPath = ""
 }
